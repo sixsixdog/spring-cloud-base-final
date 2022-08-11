@@ -1,0 +1,37 @@
+server:
+  port: 8180
+
+spring:
+  application:
+    name: cloud-pay
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.35:3306/cloud?serverTimezone=Asia/Shanghai
+    username: root
+    password: loop1314
+    dbcp2:
+      min-idle: 1
+      max-total: 10
+      max-wait-millis: 150
+      initial-size: 1
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sixsixdog.entity
+
+logging:
+  config: classpath:logback-spring.xml
+  logPath: log/cloud-pay2
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: cloud-pay8180
+  client:
+    service-url:
+      defaultZone: http://eureka8088:8088/eureka/,http://eureka8089:8089/eureka/
+      register-with-eureka: true
+      fetch-registry: true

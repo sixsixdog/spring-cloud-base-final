@@ -1,0 +1,21 @@
+server:
+  port: 8889
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8088:8088/eureka/,http://eureka8089:8089/eureka/
+    instance:
+      instanceId: cloud-openfeign-server
+      register-with-eureka: false
+
+ribbon:
+  #默认只有1秒等待，如果超过1秒还没有可用的服务，则抛出错误
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+#feign指定接口使用的日志级别
+logging:
+  level:
+    com.sixsixdog.server.FeignServer: debug

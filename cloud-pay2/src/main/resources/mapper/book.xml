@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sixsixdog.dao.IBook">
+    <insert id="insertBook" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into book (name, price, author) VALUES (#{name}, #{price}, #{author} )
+    </insert>
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM book
+    </select>
+    <select id="queryBookById" resultType="com.sixsixdog.entity.CBook">
+        SELECT * FROM book b WHERE b.id = #{id} limit 1
+    </select>
+</mapper>

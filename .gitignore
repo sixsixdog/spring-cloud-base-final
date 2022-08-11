@@ -1,0 +1,14 @@
+# 项目排除路径
+/cloud-pay/target/
+/log/debug/log_debug.log
+/log/error/log_error.log
+/log/info/log_info.log
+
+# 项目排除路径
+/api-common/target/
+/cloud-eureka/target/
+/cloud-eureka2/target/
+/cloud-pay2/target/
+/cloud-server/target/
+# 项目排除路径
+/cloud-openfeign/target/

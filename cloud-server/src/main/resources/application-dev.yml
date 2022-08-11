@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cloud-server
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: cloud-server8081
+  client:
+    service-url:
+      defaultZone: http://eureka8088:8088/eureka/,http://eureka8089:8089/eureka/
+      register-with-eureka: true
+      fetch-registry: true
+
