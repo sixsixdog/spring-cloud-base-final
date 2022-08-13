@@ -17,6 +17,7 @@
         <module>cloud-pay2</module>
         <module>cloud-pay</module>
         <module>cloud-openfeign</module>
+        <module>cloud-pay-hystrix</module>
     </modules>
 
     <!--锁定版本-->
@@ -129,7 +130,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
 
 </project>

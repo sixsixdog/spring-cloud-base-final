@@ -1,0 +1,16 @@
+server:
+  port: 9081
+
+spring:
+  application:
+    name: hystrix-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: hystrix-service
+  client:
+    service-url:
+      defaultZone: http://eureka8088:8088/eureka/,http://eureka8089:8089/eureka/
+      register-with-eureka: true
+      fetch-registry: true

@@ -15,7 +15,7 @@ eureka:
     #实例名
     hostname: eureka8089
     #显示ip
-    prefer-ip-address: true
+    prefer-ip-address: false
     #心跳间隔
     lease-renewal-interval-in-seconds: 3
     #最大心跳间隔
